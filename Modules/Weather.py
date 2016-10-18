@@ -30,8 +30,8 @@ class Application(Frame):
         FrameD5 = Frame(master, bg="green")
         FrameD5.grid(row=5, column=12, rowspan=3, columnspan=3, sticky=W + E + N + S)
 
-        Label(FrameCurrent, text=self.weatherinfo.currentInfo["Day"]).grid(column=0, row=0, columnspan=5, sticky = W + E + S)
-        Label(FrameCurrent, text=str(self.weatherinfo.currentInfo["Temp"]) + " °C").grid(column=0, row=1, columnspan=5, sticky=S)
+        Label(FrameCurrent, text=self.weatherinfo.currentInfo["Day"], bg = "white", fg = "blue", font=("Helvetica",10)).grid(column=0, row=0, columnspan=5, sticky = W + E)
+        Label(FrameCurrent, text=str(self.weatherinfo.currentInfo["Temp"]) + " °C", bg = "white", fg = "blue", font=("Helvetica",16)).grid(column=3, row=1, columnspan=2, rowspan=2, sticky=S)
 
 root = Tk()
 app = Application(master=root)
